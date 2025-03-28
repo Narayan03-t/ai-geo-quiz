@@ -1,0 +1,126 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.quiz-column, .map-column {
+    flex: 1;
+    min-width: 0; /* Prevents overflow */
+}
+
+.quiz-column {
+    text-align: left;
+    padding: 10px;
+}
+
+.map-column {
+    padding: 10px;
+}
+
+#quiz-container {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+input[type="number"] {
+    padding: 8px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+}
+
+#options button {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    border: 1px solid #bdc3c7;
+    text-align: left;
+    padding: 12px;
+}
+
+#options button:hover {
+    background-color: #dfe6e9;
+}
+
+#map-container {
+    height: 500px; /* Fixed height for map */
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.feedback {
+    margin-top: 15px;
+    font-size: 1.1em;
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Hidden by default */
+}
+
+.feedback.correct {
+    background-color: #d4edda;
+    color: #155724;
+    display: block;
+}
+
+.feedback.incorrect {
+    background-color: #f8d7da;
+    color: #721c24;
+    display: block;
+}
+
+.credits {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #7f8c8d;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    .map-column {
+        height: 300px; /* Smaller map on mobile */
+    }
+}

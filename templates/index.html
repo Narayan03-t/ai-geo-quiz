@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geography Quiz Bot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>🌍 AI Geography Quiz Bot</h1>
+        <div class="main-content">
+            <!-- Quiz Column -->
+            <div class="quiz-column">
+                <div id="quiz-container">
+                    <div id="start-screen">
+                        <p>Welcome to the Geography Quiz! Test your knowledge and explore the world.</p>
+                        <input type="number" id="num-questions" min="1" max="10" value="5" placeholder="Number of Questions">
+                        <button onclick="startQuiz()">Start Quiz</button>
+                    </div>
+                    <div id="question-container" style="display: none;">
+                        <h2 id="question-text"></h2>
+                        <div id="options"></div>
+                        <div id="feedback" class="feedback"></div>
+                    </div>
+                    <div id="result-screen" style="display: none;">
+                        <h2>Quiz Completed!</h2>
+                        <p id="result-text"></p>
+                        <button onclick="restartQuiz()">Play Again</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Map Column -->
+            <div class="map-column">
+                <div id="map-container">
+                    <iframe id="map-iframe" src="/map" width="100%" height="100%"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="credits">
+            <p>Made by: Tek Narayan Yadav, Shivam Sharma, Abhishek Kumar Singh</p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
